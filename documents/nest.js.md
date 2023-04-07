@@ -1,0 +1,28 @@
+# nest.jsの簡易説明
+# アーキテクチャ構成
+- Module
+- Resolver
+- Service
+  - 今回は以上の3つを用いる
+# Moduleの役割
+## Moduleの種類
+- 大きく2つのモジュールがある
+1. rootモジュール
+2. Featureモジュール
+## Moduleの役割
+- 関連するResolverをまとめたり,アプリケーションとして利用できるようにNest.jsに登録して利用する
+## Moduleの定義方法
+1. classに@Module()デコレータをつける
+2. @Module()デコレータのプロパティを記述する
+# Resolverの役割
+- Controllerの役割を持つ
+## Resolverの定義方法
+1. classに＠Resolver()デコレータをつける
+2. 実現したい内容の処理をメソッドとして定義する
+# Serviceの役割
+- アプリケーション固有のビジネスロジックを定義する
+- 
+## Serviceの定義方法
+1. classに@injectable()デコレータをつける
+２. classの中にビジネスロジックを記載する
+
