@@ -25,4 +25,5 @@
 ## Serviceの定義方法
 1. classに@injectable()デコレータをつける
 ２. classの中にビジネスロジックを記載する
-
+# Nest.jsでGraphQLを用いる方法
+1. 
