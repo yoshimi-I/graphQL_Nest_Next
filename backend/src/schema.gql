@@ -15,5 +15,5 @@ type Query {
 }
 
 type Mutation {
-  createTask(name: String!, string: String!, description: String!): Task!
+  createTask(name: String!, dueDate: String!, description: String!): Task!
 }

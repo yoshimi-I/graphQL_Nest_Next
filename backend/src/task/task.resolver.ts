@@ -14,7 +14,7 @@ export class TaskResolver {
   @Mutation(() => Task)
   createTask(
     @Args('name') name: string,
-    @Args('string') dueDate: string,
+    @Args('dueDate') dueDate: string,
     @Args('description') description?: string,
   ): Task {
     return this.TaskService.createTask(name, dueDate, description);
