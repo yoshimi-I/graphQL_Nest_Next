@@ -18,6 +18,9 @@ lerna-debug.log*
 # OS
 .DS_Store
 
+# Migration
+backend/prisma/migrations
+
 # Tests
 /coverage
 /.nyc_output
