@@ -72,3 +72,5 @@
   - フィールドをデータベース内の別の名前で定義するための修飾子
 - @ignore
   - Prismaのスキーマから特定のフィールドを除外するための修飾子
+- 参考文献
+  - [https://zenn.dev/ikekyo/scraps/f6c87fbfd3bf9d](https://zenn.dev/ikekyo/scraps/f6c87fbfd3bf9d)
