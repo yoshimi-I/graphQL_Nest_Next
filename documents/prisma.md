@@ -7,15 +7,20 @@
   ```
   - これにより.envファイルと,prisma/schema.prismaが生成される
 2. .envの編集
-  - 以下を編集する
+- 以下を編集する
   ```
   DATABASE_URL="使うDB":"ユーザー名"//:"パスワード"@localhost:使用するローカルサーバーのポート番号/"データベース名"?schema=public"
   ```
-  - 具体例
+- 具体例
   ```
   DATABASE_URL="postgresql://user:pass@localhost:5432/graphqldb?schema=public"
   ```
 3. schema.prismaに記載していく
+4. 初期migrationを行う
+- 以下のコマンドでマイグレーション可能
+  ```
+  npx prisma migrate dev --name init
+  ```
 
 # schema
 - ここから属性の定義方法を記載していく
