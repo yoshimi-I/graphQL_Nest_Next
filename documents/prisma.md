@@ -22,8 +22,15 @@
   npx prisma migrate dev --name init
   ```
 
-# schema
+# 作成したテーブルの確認方法
+- prisma studioを使う
+## 使い方
+```
+npx prisma studio
+```
+# schema一覧
 - ここから属性の定義方法を記載していく
+
 
 ## 1. string
 | types       | type attribute  |
@@ -77,5 +84,18 @@
   - フィールドをデータベース内の別の名前で定義するための修飾子
 - @ignore
   - Prismaのスキーマから特定のフィールドを除外するための修飾子
+
+# DBの操作方法
+- prismaのクライアントを作成していく
+- 今回は主にnest.jsでprismaを使用する方法を記述していく
+## 具体的な流れ
+1. まずはDB操作のディレクトリを作成していく(今回はprismaという名前にした)
+2. そこにmoduleとservicesを追加
+3. servicesに以下のコードをコピペ
+```
+
+```
+
+
 - 参考文献
   - [https://zenn.dev/ikekyo/scraps/f6c87fbfd3bf9d](https://zenn.dev/ikekyo/scraps/f6c87fbfd3bf9d)
