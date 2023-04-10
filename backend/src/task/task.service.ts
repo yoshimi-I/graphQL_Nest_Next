@@ -17,7 +17,7 @@ export class TaskService {
     newTasks.name = name;
     newTasks.dueDate = dueDate;
     newTasks.description = description;
-    newTasks.status = 'NOT_STATED';
+    newTasks.status = 'NOT_STARTED';
     this.tasks.push(newTasks);
     return newTasks;
   }
