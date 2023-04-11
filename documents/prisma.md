@@ -93,9 +93,34 @@ npx prisma studio
 2. そこにmoduleとservicesを追加
 3. servicesに以下のコードをコピペ
 ```
+import { INestApplication, Injectable, OnModuleInit } from '@nestjs/common';
+import { PrismaClient } from '@prisma/client';
 
+@Injectable()
+export class PrismaService extends PrismaClient implements OnModuleInit {
+  async onModuleInit() {
+    await this.$connect();
+  }
+
+  async enableShutdownHooks(app: INestApplication) {
+    this.$on('beforeExit', async () => {
+      await app.close();
+    });
+  }
+}
 ```
+4. 最後にmodulesに以下をコピペ
+```
+import { Module } from '@nestjs/common';
+import { PrismaService } from './prisma.service';
 
+@Module({
+  providers: [PrismaService],
+  exports: [PrismaService],
+})
+@Module({})
+export class PrismaModule {}
+```
 
 - 参考文献
   - [https://zenn.dev/ikekyo/scraps/f6c87fbfd3bf9d](https://zenn.dev/ikekyo/scraps/f6c87fbfd3bf9d)
